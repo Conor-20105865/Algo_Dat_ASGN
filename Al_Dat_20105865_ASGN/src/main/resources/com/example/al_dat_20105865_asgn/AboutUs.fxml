@@ -41,7 +41,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.al_dat_20105865_asgn.TheatreSystem">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -50,7 +50,7 @@
             <Font size="18.0" />
           </font>
         </Label>
-            <Button layoutY="2.0" mnemonicParsing="false" text="Home" />
+            <Button layoutY="2.0" mnemonicParsing="false" text="Home" onAction="#onHomeButtonClick"/>
             <DialogPane contentText="Theatre X is a vibrant, intimate space dedicated to&#10; showcasing the best of local and emerging talent. &#10;With a single stage that serves as the beating heart&#10; of our venue, we create a space where stories come &#10;to life and every performance feels personal and immersive." headerText="Welcome to Theatre X" layoutX="22.0" layoutY="56.0" prefHeight="144.0" prefWidth="360.0" />
             <DialogPane contentText="Email: theatreX@mail.com&#10;Phone: 089 142 4758" headerText="Contact Us" layoutX="14.0" layoutY="295.0" prefHeight="91.0" prefWidth="188.0" />
             <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="404.0" layoutY="56.0">
