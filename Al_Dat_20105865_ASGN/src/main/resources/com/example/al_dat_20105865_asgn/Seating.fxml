@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
 <!--
   Copyright (c) 2015, 2019, Gluon and/or its affiliates.
   All rights reserved. Use is subject to license terms.
@@ -32,123 +40,142 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<VBox prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" layoutX="220.0" layoutY="14.0" prefHeight="23.0" prefWidth="200.0" text="Please choose a Seat" textAlignment="CENTER" textFill="#9f9f9f">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-  <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-      <children>
-        <Label alignment="CENTER" layoutX="220.0" layoutY="14.0" prefHeight="23.0" prefWidth="200.0" style="&#10;" text="Please choose a Seat" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
-            <ImageView fitHeight="307.0" fitWidth="608.0" layoutX="16.0" layoutY="67.0">
-               <image>
-                  <Image url="@../../../../../../../../seating.png" />
-               </image>
-            </ImageView>
-            <CheckBox layoutX="115.0" layoutY="90.0" mnemonicParsing="false" />
-            <CheckBox layoutX="115.0" layoutY="114.0" mnemonicParsing="false" />
-            <CheckBox layoutX="115.0" layoutY="138.0" mnemonicParsing="false" />
-            <CheckBox layoutX="291.0" layoutY="136.0" mnemonicParsing="false" />
-            <CheckBox layoutX="291.0" layoutY="89.0" mnemonicParsing="false" />
-            <CheckBox layoutX="293.0" layoutY="113.0" mnemonicParsing="false" />
-            <CheckBox layoutX="249.0" layoutY="137.0" mnemonicParsing="false" />
-            <CheckBox layoutX="249.0" layoutY="114.0" mnemonicParsing="false" />
-            <CheckBox layoutX="249.0" layoutY="88.0" mnemonicParsing="false" />
-            <CheckBox layoutX="203.0" layoutY="139.0" mnemonicParsing="false" />
-            <CheckBox layoutX="203.0" layoutY="114.0" mnemonicParsing="false" />
-            <CheckBox layoutX="203.0" layoutY="88.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="139.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="113.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="90.0" mnemonicParsing="false" />
-            <CheckBox layoutX="336.0" layoutY="89.0" mnemonicParsing="false" />
-            <CheckBox layoutX="383.0" layoutY="114.0" mnemonicParsing="false" />
-            <CheckBox layoutX="428.0" layoutY="138.0" mnemonicParsing="false" />
-            <CheckBox layoutX="428.0" layoutY="89.0" mnemonicParsing="false" />
-            <CheckBox layoutX="383.0" layoutY="137.0" mnemonicParsing="false" />
-            <CheckBox layoutX="429.0" layoutY="114.0" mnemonicParsing="false" />
-            <CheckBox layoutX="383.0" layoutY="89.0" mnemonicParsing="false" />
-            <CheckBox layoutX="336.0" layoutY="137.0" mnemonicParsing="false" />
-            <CheckBox layoutX="336.0" layoutY="114.0" mnemonicParsing="false" />
-            <CheckBox layoutX="68.0" layoutY="173.0" mnemonicParsing="false" />
-            <CheckBox layoutX="112.0" layoutY="174.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="174.0" mnemonicParsing="false" />
-            <CheckBox layoutX="68.0" layoutY="197.0" mnemonicParsing="false" />
-            <CheckBox layoutX="429.0" layoutY="173.0" mnemonicParsing="false" />
-            <CheckBox layoutX="384.0" layoutY="174.0" mnemonicParsing="false" />
-            <CheckBox layoutX="341.0" layoutY="174.0" mnemonicParsing="false" />
-            <CheckBox layoutX="291.0" layoutY="173.0" mnemonicParsing="false" />
-            <CheckBox layoutX="249.0" layoutY="173.0" mnemonicParsing="false" />
-            <CheckBox layoutX="203.0" layoutY="174.0" mnemonicParsing="false" />
-            <CheckBox layoutX="68.0" layoutY="258.0" mnemonicParsing="false" />
-            <CheckBox layoutX="473.0" layoutY="221.0" mnemonicParsing="false" />
-            <CheckBox layoutX="473.0" layoutY="198.0" mnemonicParsing="false" />
-            <CheckBox layoutX="251.0" layoutY="197.0" mnemonicParsing="false" />
-            <CheckBox layoutX="474.0" layoutY="174.0" mnemonicParsing="false" />
-            <CheckBox layoutX="429.0" layoutY="222.0" mnemonicParsing="false" />
-            <CheckBox layoutX="429.0" layoutY="196.0" mnemonicParsing="false" />
-            <CheckBox layoutX="384.0" layoutY="221.0" mnemonicParsing="false" />
-            <CheckBox layoutX="384.0" layoutY="197.0" mnemonicParsing="false" />
-            <CheckBox layoutX="341.0" layoutY="198.0" mnemonicParsing="false" />
-            <CheckBox layoutX="291.0" layoutY="222.0" mnemonicParsing="false" />
-            <CheckBox layoutX="290.0" layoutY="197.0" mnemonicParsing="false" />
-            <CheckBox layoutX="250.0" layoutY="221.0" mnemonicParsing="false" />
-            <CheckBox layoutX="340.0" layoutY="222.0" mnemonicParsing="false" />
-            <CheckBox layoutX="202.0" layoutY="221.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="221.0" mnemonicParsing="false" />
-            <CheckBox layoutX="112.0" layoutY="222.0" mnemonicParsing="false" />
-            <CheckBox layoutX="68.0" layoutY="221.0" mnemonicParsing="false" />
-            <CheckBox layoutX="203.0" layoutY="196.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="197.0" mnemonicParsing="false" />
-            <CheckBox layoutX="113.0" layoutY="197.0" mnemonicParsing="false" />
-            <CheckBox layoutX="384.0" layoutY="307.0" mnemonicParsing="false" />
-            <CheckBox layoutX="113.0" layoutY="259.0" mnemonicParsing="false" />
-            <CheckBox layoutX="383.0" layoutY="281.0" mnemonicParsing="false" />
-            <CheckBox layoutX="383.0" layoutY="257.0" mnemonicParsing="false" />
-            <CheckBox layoutX="337.0" layoutY="330.0" mnemonicParsing="false" />
-            <CheckBox layoutX="338.0" layoutY="307.0" mnemonicParsing="false" />
-            <CheckBox layoutX="339.0" layoutY="282.0" mnemonicParsing="false" />
-            <CheckBox layoutX="339.0" layoutY="258.0" mnemonicParsing="false" />
-            <CheckBox layoutX="294.0" layoutY="330.0" mnemonicParsing="false" />
-            <CheckBox layoutX="295.0" layoutY="307.0" mnemonicParsing="false" />
-            <CheckBox layoutX="294.0" layoutY="283.0" mnemonicParsing="false" />
-            <CheckBox layoutX="294.0" layoutY="258.0" mnemonicParsing="false" />
-            <CheckBox layoutX="250.0" layoutY="329.0" mnemonicParsing="false" />
-            <CheckBox layoutX="249.0" layoutY="306.0" mnemonicParsing="false" />
-            <CheckBox layoutX="249.0" layoutY="282.0" mnemonicParsing="false" />
-            <CheckBox layoutX="249.0" layoutY="258.0" mnemonicParsing="false" />
-            <CheckBox layoutX="203.0" layoutY="331.0" mnemonicParsing="false" />
-            <CheckBox layoutX="203.0" layoutY="307.0" mnemonicParsing="false" />
-            <CheckBox layoutX="202.0" layoutY="282.0" mnemonicParsing="false" />
-            <CheckBox layoutX="202.0" layoutY="258.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="331.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="305.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="283.0" mnemonicParsing="false" />
-            <CheckBox layoutX="158.0" layoutY="259.0" mnemonicParsing="false" />
-            <CheckBox layoutX="112.0" layoutY="329.0" mnemonicParsing="false" />
-            <CheckBox layoutX="112.0" layoutY="306.0" mnemonicParsing="false" />
-            <CheckBox layoutX="113.0" layoutY="282.0" mnemonicParsing="false" />
-            <CheckBox layoutX="67.0" layoutY="330.0" mnemonicParsing="false" />
-            <CheckBox layoutX="68.0" layoutY="306.0" mnemonicParsing="false" />
-            <CheckBox layoutX="68.0" layoutY="282.0" mnemonicParsing="false" />
-            <CheckBox layoutX="472.0" layoutY="307.0" mnemonicParsing="false" />
-            <CheckBox layoutX="473.0" layoutY="282.0" mnemonicParsing="false" />
-            <CheckBox layoutX="473.0" layoutY="259.0" mnemonicParsing="false" />
-            <CheckBox layoutX="430.0" layoutY="329.0" mnemonicParsing="false" />
-            <CheckBox layoutX="430.0" layoutY="306.0" mnemonicParsing="false" />
-            <CheckBox layoutX="429.0" layoutY="281.0" mnemonicParsing="false" />
-            <CheckBox layoutX="429.0" layoutY="257.0" mnemonicParsing="false" />
-            <CheckBox layoutX="384.0" layoutY="330.0" mnemonicParsing="false" />
-            <CheckBox layoutX="472.0" layoutY="329.0" mnemonicParsing="false" />
-      </children>
-    </AnchorPane>
-  </children>
+                <!-- Balcony Group -->
+                <Label layoutX="40.0" layoutY="50.0" text="Balcony" textFill="#9f9f9f" />
+                <GridPane layoutX="40.0" layoutY="70.0" hgap="10" vgap="10"> <!-- Adjusted vgap for separation -->
+                    <children>
+                        <!-- Balcony Checkboxes: 3 rows, 8 columns -->
+                        <CheckBox text="a1" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <CheckBox text="a2" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                        <CheckBox text="a3" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+                        <CheckBox text="a4" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+                        <CheckBox text="a5" GridPane.rowIndex="0" GridPane.columnIndex="4" />
+                        <CheckBox text="a6" GridPane.rowIndex="0" GridPane.columnIndex="5" />
+                        <CheckBox text="a7" GridPane.rowIndex="0" GridPane.columnIndex="6" />
+                        <CheckBox text="a8" GridPane.rowIndex="0" GridPane.columnIndex="7" />
+
+                        <CheckBox text="b1" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <CheckBox text="b2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                        <CheckBox text="b3" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                        <CheckBox text="b4" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+                        <CheckBox text="b5" GridPane.rowIndex="1" GridPane.columnIndex="4" />
+                        <CheckBox text="b6" GridPane.rowIndex="1" GridPane.columnIndex="5" />
+                        <CheckBox text="b7" GridPane.rowIndex="1" GridPane.columnIndex="6" />
+                        <CheckBox text="b8" GridPane.rowIndex="1" GridPane.columnIndex="7" />
+
+                        <CheckBox text="c1" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <CheckBox text="c2" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                        <CheckBox text="c3" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+                        <CheckBox text="c4" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+                        <CheckBox text="c5" GridPane.rowIndex="2" GridPane.columnIndex="4" />
+                        <CheckBox text="c6" GridPane.rowIndex="2" GridPane.columnIndex="5" />
+                        <CheckBox text="c7" GridPane.rowIndex="2" GridPane.columnIndex="6" />
+                        <CheckBox text="c8" GridPane.rowIndex="2" GridPane.columnIndex="7" />
+                    </children>
+                </GridPane>
+
+                <!-- Circle Group -->
+                <Label layoutX="40.0" layoutY="270.0" text="Circle" textFill="#9f9f9f" />
+                <GridPane layoutX="40.0" layoutY="290.0" hgap="10" vgap="10"> <!-- Adjusted vgap for separation -->
+                    <children>
+                        <!-- Circle Checkboxes: 3 rows, 10 columns -->
+                        <CheckBox text="a1" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <CheckBox text="a2" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                        <CheckBox text="a3" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+                        <CheckBox text="a4" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+                        <CheckBox text="a5" GridPane.rowIndex="0" GridPane.columnIndex="4" />
+                        <CheckBox text="a6" GridPane.rowIndex="0" GridPane.columnIndex="5" />
+                        <CheckBox text="a7" GridPane.rowIndex="0" GridPane.columnIndex="6" />
+                        <CheckBox text="a8" GridPane.rowIndex="0" GridPane.columnIndex="7" />
+                        <CheckBox text="a9" GridPane.rowIndex="0" GridPane.columnIndex="8" />
+                        <CheckBox text="a10" GridPane.rowIndex="0" GridPane.columnIndex="9" />
+
+                        <CheckBox text="b1" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <CheckBox text="b2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                        <CheckBox text="b3" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                        <CheckBox text="b4" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+                        <CheckBox text="b5" GridPane.rowIndex="1" GridPane.columnIndex="4" />
+                        <CheckBox text="b6" GridPane.rowIndex="1" GridPane.columnIndex="5" />
+                        <CheckBox text="b7" GridPane.rowIndex="1" GridPane.columnIndex="6" />
+                        <CheckBox text="b8" GridPane.rowIndex="1" GridPane.columnIndex="7" />
+                        <CheckBox text="b9" GridPane.rowIndex="1" GridPane.columnIndex="8" />
+                        <CheckBox text="b10" GridPane.rowIndex="1" GridPane.columnIndex="9" />
+
+                        <CheckBox text="c1" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <CheckBox text="c2" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                        <CheckBox text="c3" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+                        <CheckBox text="4c" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+                        <CheckBox text="c5" GridPane.rowIndex="2" GridPane.columnIndex="4" />
+                        <CheckBox text="c6" GridPane.rowIndex="2" GridPane.columnIndex="5" />
+                        <CheckBox text="c7" GridPane.rowIndex="2" GridPane.columnIndex="6" />
+                        <CheckBox text="c8" GridPane.rowIndex="2" GridPane.columnIndex="7" />
+                        <CheckBox text="c9" GridPane.rowIndex="2" GridPane.columnIndex="8" />
+                        <CheckBox text="c10" GridPane.rowIndex="2" GridPane.columnIndex="9" />
+                    </children>
+                </GridPane>
+
+                <!-- Stalls Group -->
+                <Label layoutX="40.0" layoutY="450.0" text="Stalls" textFill="#9f9f9f" />
+                <GridPane layoutX="40.0" layoutY="470.0" hgap="10" vgap="10"> <!-- Adjusted vgap for separation -->
+                    <children>
+                        <!-- Stalls Checkboxes: 4 rows, 10 columns -->
+                        <CheckBox text="a1" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <CheckBox text="a2" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                        <CheckBox text="a3" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+                        <CheckBox text="a4" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+                        <CheckBox text="a5" GridPane.rowIndex="0" GridPane.columnIndex="4" />
+                        <CheckBox text="a6" GridPane.rowIndex="0" GridPane.columnIndex="5" />
+                        <CheckBox text="a7" GridPane.rowIndex="0" GridPane.columnIndex="6" />
+                        <CheckBox text="a8" GridPane.rowIndex="0" GridPane.columnIndex="7" />
+                        <CheckBox text="a9" GridPane.rowIndex="0" GridPane.columnIndex="8" />
+                        <CheckBox text="a10" GridPane.rowIndex="0" GridPane.columnIndex="9" />
+
+                        <CheckBox text="b1" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <CheckBox text="b2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                        <CheckBox text="b3" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                        <CheckBox text="b4" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+                        <CheckBox text="b5" GridPane.rowIndex="1" GridPane.columnIndex="4" />
+                        <CheckBox text="b6" GridPane.rowIndex="1" GridPane.columnIndex="5" />
+                        <CheckBox text="b7" GridPane.rowIndex="1" GridPane.columnIndex="6" />
+                        <CheckBox text="b8" GridPane.rowIndex="1" GridPane.columnIndex="7" />
+                        <CheckBox text="b9" GridPane.rowIndex="1" GridPane.columnIndex="8" />
+                        <CheckBox text="b10" GridPane.rowIndex="1" GridPane.columnIndex="9" />
+
+                        <CheckBox text="c1" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <CheckBox text="c2" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                        <CheckBox text="c3" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+                        <CheckBox text="c4" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+                        <CheckBox text="c5" GridPane.rowIndex="2" GridPane.columnIndex="4" />
+                        <CheckBox text="c6" GridPane.rowIndex="2" GridPane.columnIndex="5" />
+                        <CheckBox text="c7" GridPane.rowIndex="2" GridPane.columnIndex="6" />
+                        <CheckBox text="c8" GridPane.rowIndex="2" GridPane.columnIndex="7" />
+                        <CheckBox text="c9" GridPane.rowIndex="2" GridPane.columnIndex="8" />
+                        <CheckBox text="c10" GridPane.rowIndex="2" GridPane.columnIndex="9" />
+
+                        <CheckBox text="d1" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                        <CheckBox text="d2" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                        <CheckBox text="d3" GridPane.rowIndex="3" GridPane.columnIndex="2" />
+                        <CheckBox text="d4" GridPane.rowIndex="3" GridPane.columnIndex="3" />
+                        <CheckBox text="d5" GridPane.rowIndex="3" GridPane.columnIndex="4" />
+                        <CheckBox text="d6" GridPane.rowIndex="3" GridPane.columnIndex="5" />
+                        <CheckBox text="d7" GridPane.rowIndex="3" GridPane.columnIndex="6" />
+                        <CheckBox text="d8" GridPane.rowIndex="3" GridPane.columnIndex="7" />
+                        <CheckBox text="d9" GridPane.rowIndex="3" GridPane.columnIndex="8" />
+                        <CheckBox text="d10" GridPane.rowIndex="3" GridPane.columnIndex="9" />
+                    </children>
+                </GridPane>
+
+            </children>
+        </AnchorPane>
+    </children>
 </VBox>

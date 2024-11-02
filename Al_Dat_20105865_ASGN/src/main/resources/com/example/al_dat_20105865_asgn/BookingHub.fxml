@@ -39,7 +39,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" spacing="10.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.al_dat_20105865_asgn.TheatreSystem">
+<VBox prefHeight="400.0" prefWidth="640.0" spacing="10.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.al_dat_20105865_asgn.BookingHubController">
     <Label text="Welcome to the Bookings Hub, please choose an option" textAlignment="CENTER" textFill="#9f9f9f">
         <font>
             <Font size="18.0"/>
