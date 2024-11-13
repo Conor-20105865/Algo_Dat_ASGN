@@ -1,10 +1,15 @@
 package com.example.al_dat_20105865_asgn;
 
-public class DoublyLinkedList<T> {
+import java.io.*;
+
+public class DoublyLinkedList<T> implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     Node<T> head;
     Node<T> tail;
 
-    static class Node<T> {
+    static class Node<T> implements Serializable {
+        private static final long serialVersionUID = 1L;
         T data;
         Node<T> next;
         Node<T> prev;
@@ -19,7 +24,6 @@ public class DoublyLinkedList<T> {
     // Insert at the end of the list
     public void insertAtEnd(T data) {
         Node<T> newNode = new Node<>(data);
-
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -33,7 +37,6 @@ public class DoublyLinkedList<T> {
     // Insert at the beginning of the list
     public void insertAtBeginning(T data) {
         Node<T> newNode = new Node<>(data);
-
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -60,20 +63,37 @@ public class DoublyLinkedList<T> {
             count++;
         }
 
-        // Insert at the end if position is greater than the length
         if (current == null) {
             insertAtEnd(data);
         } else {
             newNode.next = current.next;
             newNode.prev = current;
-
             if (current.next != null) {
                 current.next.prev = newNode;
             } else {
-                tail = newNode;  // Update tail if new node is at the end
+                tail = newNode;
             }
-
             current.next = newNode;
+        }
+    }
+
+    // Save the list to a file (binary serialization)
+    public void saveListToBinaryFile(String filename) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
+            oos.writeObject(this);
+            System.out.println("List saved to binary file: " + filename);
+        } catch (IOException e) {
+            System.err.println("Error saving list to binary file: " + e.getMessage());
+        }
+    }
+
+    // Load the list from a file (binary serialization)
+    public static <T> DoublyLinkedList<T> loadListFromBinaryFile(String filename) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))) {
+            return (DoublyLinkedList<T>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Error loading list from binary file: " + e.getMessage());
+            return null;
         }
     }
 
@@ -88,65 +108,18 @@ public class DoublyLinkedList<T> {
         System.out.println();
     }
 
-    // Print the list from tail to head
-    public void printReverse() {
-        Node<T> currNode = tail;
-        System.out.print("Doubly Linked List (Tail to Head): ");
-        while (currNode != null) {
-            System.out.print(currNode.data + " ");
-            currNode = currNode.prev;
-        }
-        System.out.println();
-    }
+    //clear the whole list
+     public void clear() {
+        head = null;
+        tail = null;
+        System.out.println("List cleared.");
+     }
 
-    // Search for a specific element in the list
-    public boolean search(T data) {
-        Node<T> currNode = head;
+     //update existing shit
+    //TODO:this shit
 
-        while (currNode != null) {
-            if (currNode.data.equals(data)) {
-                return true;  // Data found
-            }
-            currNode = currNode.next;
-        }
-        return false; // Data not found
-    }
+    //count method for mum of shit in somethin dunno kinda just here cause why not
 
-    // Delete the first occurrence of a given data
-    public void delete(T data) {
-        Node<T> currNode = head;
-
-        // Traverse the list to find the node to delete
-        while (currNode != null) {
-            if (currNode.data.equals(data)) {
-                // Case 1: Node to be deleted is the head
-                if (currNode == head) {
-                    head = currNode.next;
-                    if (head != null) {
-                        head.prev = null;
-                    } else {
-                        tail = null; // List is now empty
-                    }
-                }
-                // Case 2: Node to be deleted is the tail
-                else if (currNode == tail) {
-                    tail = currNode.prev;
-                    if (tail != null) {
-                        tail.next = null;
-                    } else {
-                        head = null; // List is now empty
-                    }
-                }
-                // Case 3: Node to be deleted is in the middle
-                else {
-                    currNode.prev.next = currNode.next;
-                    currNode.next.prev = currNode.prev;
-                }
-                return; // Data found and deleted; exit the method
-            }
-            currNode = currNode.next;
-        }
-    }
 
     public static void main(String[] args) {
         DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
@@ -155,17 +128,21 @@ public class DoublyLinkedList<T> {
         list.insertAtEnd(1);
         list.insertAtEnd(3);
         list.insertAtEnd(4);
-        list.printList();  // Output: 1 3 4
+        list.printList();
 
         list.insertAtBeginning(0);
-        list.printList();  // Output: 0 1 3 4
+        list.printList();
 
         list.insertAtPosition(2, 2);
-        list.printList();  // Output: 0 1 2 3 4
+        list.printList();
 
-        list.insertAtPosition(5, 10); // Inserts at the end since position > length
-        list.printList();  // Output: 0 1 2 3 4 5
+        // Save the list to a file
+        list.saveListToBinaryFile("doublyLinkedList.bin");
+
+        // Load the list from the file
+        DoublyLinkedList<Integer> loadedList = DoublyLinkedList.loadListFromBinaryFile("doublyLinkedList.bin");
+        if (loadedList != null) {
+            loadedList.printList();
+        }
     }
-
-
 }

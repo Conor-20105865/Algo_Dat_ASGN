@@ -66,4 +66,23 @@ public class MainController {
             e.printStackTrace();
         }
     }
+
+    public static void main(String[] args) {
+        DoublyLinkedList<Integer> showlist = new DoublyLinkedList<>();
+
+        // Test insertions
+        showlist.insertAtEnd(1);
+        showlist.insertAtEnd(3);
+        showlist.insertAtEnd(4);
+        showlist.printList();  // Output: 1 3 4
+
+        showlist.insertAtBeginning(0);
+        showlist.printList();  // Output: 0 1 3 4
+
+        showlist.insertAtPosition(583, 2);
+        showlist.printList();  // Output: 0 1 2 3 4
+
+        showlist.insertAtPosition(5, 10); // Inserts at the end since position > length
+        showlist.printList();  // Output: 0 1 2 3 4 5
+    }
 }
