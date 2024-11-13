@@ -108,6 +108,19 @@ public class DoublyLinkedList<T> implements Serializable {
         System.out.println();
     }
 
+    //print list tail to head
+    public void printListReverse() {
+        Node<T> currNode = tail;
+        System.out.print("Doubly Linked List (Tail to Head): ");
+        while (currNode != null) {
+            System.out.print(currNode.data + " ");
+            currNode = currNode.prev;
+        }
+        System.out.println();
+    }
+
+
+
     //clear the whole list
      public void clear() {
         head = null;
@@ -115,10 +128,81 @@ public class DoublyLinkedList<T> implements Serializable {
         System.out.println("List cleared.");
      }
 
-     //update existing shit
-    //TODO:this shit
+     //update existing shit at specific location
+    //TODO: REMEMBER THAT ITS A 0-BASE INDEX
+     public void updateAtPosition(T newData, int position) {
+         if (position < 0) {
+             System.err.println("Invalid position.");
+             return;
+         }
 
-    //count method for mum of shit in somethin dunno kinda just here cause why not
+         Node<T> current = head;
+         int count = 0;
+
+         while (current != null && count < position) {
+             current = current.next;
+             count++;
+         }
+
+         if (current != null) {
+             current.data = newData;
+         } else {
+             System.err.println("Position out of bounds.");
+         }
+     }
+
+
+    //count method for modes shit in somethin dunno kinda just here cause why not
+    public int countNodes() {
+        int count = 0;
+        Node<T> current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
+    //code for deleting shtuff
+    // Remove node at a specific position
+    public void removeAtPosition(int position) {
+        if (position < 0 || head == null) {
+            System.err.println("Invalid position or list is empty.");
+            return;
+        }
+
+        Node<T> current = head;
+        int count = 0;
+
+        while (current != null && count < position) {
+            current = current.next;
+            count++;
+        }
+
+        if (current == null) {
+            System.err.println("Position out of bounds.");
+            return;
+        }
+
+        if (current.prev != null) {
+            current.prev.next = current.next;
+        } else {
+            head = current.next;  // Update head if at the start
+        }
+
+        if (current.next != null) {
+            current.next.prev = current.prev;
+        } else {
+            tail = current.prev;  // Update tail if at the end
+        }
+    }
+
+    //node empty check? cause why the fuck not
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+
 
 
     public static void main(String[] args) {
